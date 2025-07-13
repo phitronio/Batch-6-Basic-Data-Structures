@@ -13,38 +13,47 @@ class Node
     }
 };
 
-void insert_at_tail(Node* &head, Node* &tail,int val)
+void insert_at_tail(Node* &head, Node* &tail, int val)
 {
-    Node *newnode = new Node(val);
+    Node* newnode = new Node(val);
     if(head == NULL)
     {
         head = newnode;
         tail = newnode;
         return;
     }
-    tail->next = newnode;
-    tail = newnode;
-}
 
-void insert_at_head(Node* &head, int val)
+    tail->next = newnode;
+    tail = tail->next;
+}
+void insert_at_head(Node* &head, Node* &tail, int val)
 {
     Node* newnode = new Node(val);
+
+        if(head == NULL)
+    {
+        head = newnode;
+        tail = newnode;
+        return;
+    }
     newnode->next = head;
     head = newnode;
 }
-
 void insert_at_any_pos(Node* &head, int idx, int val)
 {
     Node* newnode = new Node(val);
     Node* tmp = head;
-    for(int i=1;i<idx;i++)
+    for(int i=1; i<idx; i++)
     {
         tmp = tmp->next;
+        if(tmp == NULL)
+        {
+            return;
+        }
     }
     newnode->next = tmp->next;
     tmp->next = newnode;
 }
-
 int size_linked_list(Node* head)
 {
     int cnt = 0;
@@ -84,21 +93,21 @@ int main()
         insert_at_tail(head,tail,val);
     }
     int idx;
-    while(cin >> idx >> val)    // for queries
+    while(cin>> idx >> val) // for queries
     {
         int sz = size_linked_list(head);
-        if(idx > sz)
+        if(idx>sz)
         {
             cout << "Invalid\n";
             continue;
         }
         else if(idx == sz)
         {
-            insert_at_tail(head,tail,val);
+            insert_at_tail(head, tail, val);
         }
         else if(idx == 0)
         {
-            insert_at_head(head,val);
+            insert_at_head(head, tail, val);
         }
         else
         {

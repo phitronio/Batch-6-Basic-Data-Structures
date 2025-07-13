@@ -23,7 +23,7 @@ void insert_at_head(Node* &head, int val)
 void print_linked_list(Node* head)
 {
     Node* tmp = head;
-    while(tmp != NULL)
+    while(tmp->next != NULL)
     {
         cout << tmp->val << endl;
         tmp = tmp->next;
@@ -39,9 +39,6 @@ int main()
     head->next = a;
     a->next = b;
 
-    insert_at_head(head,100);
-    insert_at_head(head,200);
-    insert_at_head(head,300);
     print_linked_list(head);
     return 0;
 }
