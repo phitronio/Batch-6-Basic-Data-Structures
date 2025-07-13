@@ -1,3 +1,5 @@
+// Problem link: https://leetcode.com/problems/backspace-string-compare/description/
+
 class Solution {
 public:
     bool backspaceCompare(string s, string t) {

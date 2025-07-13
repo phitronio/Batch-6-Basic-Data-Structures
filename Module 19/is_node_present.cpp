@@ -1,3 +1,5 @@
+// Problem link: https://www.codingninjas.com/studio/problems/code-find-a-node_5682
+
 bool isNodePresent(BinaryTreeNode<int> *root, int x) {
     if(root == NULL)
         return false;

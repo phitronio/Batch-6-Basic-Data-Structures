@@ -1,3 +1,5 @@
+// Problem link: https://www.codingninjas.com/studio/problems/diameter-of-the-binary-tree_920552
+
 int mx;
 int max_height(TreeNode<int> *root)
 {

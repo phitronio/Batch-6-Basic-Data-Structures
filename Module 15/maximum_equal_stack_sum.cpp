@@ -1,3 +1,5 @@
+// Problem link: https://www.codingninjas.com/studio/problems/maximum-equal-stack-sum_1062571
+
 #include <bits/stdc++.h> 
 int getsum(stack<int> st)
 {

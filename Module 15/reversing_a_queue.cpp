@@ -1,3 +1,5 @@
+// Problem link: https://www.codingninjas.com/studio/problems/reversing-a-queue_982934
+
 #include <bits/stdc++.h> 
 queue<int> reverseQueue(queue<int> q)
 {
